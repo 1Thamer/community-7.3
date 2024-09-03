@@ -33,7 +33,7 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request' && github.repository == 'commaai/openpilot'
     steps:
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: tmppilot.tar.gz
       - name: Load image
@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-16.04
     needs: build
     steps:
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: tmppilot.tar.gz
       - name: Load image
@@ -65,7 +65,7 @@ jobs:
     runs-on: ubuntu-16.04
     needs: build
     steps:
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: tmppilot.tar.gz
       - name: Load image
@@ -89,7 +89,7 @@ jobs:
     needs: build
     timeout-minutes: 30
     steps:
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: tmppilot.tar.gz
       - name: Load image
@@ -119,7 +119,7 @@ jobs:
     needs: build
     timeout-minutes: 30
     steps:
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: tmppilot.tar.gz
       - name: Load image
@@ -147,7 +147,7 @@ jobs:
     needs: build
     timeout-minutes: 30
     steps:
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: tmppilot.tar.gz
       - name: Load image
